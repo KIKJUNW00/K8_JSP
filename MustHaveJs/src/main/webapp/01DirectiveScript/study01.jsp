@@ -49,7 +49,7 @@ try{
 		out.println("<h1>"+ year + "년에 태어난 당신은</h1>");//실행되지않음
 		//오늘 날짜를 웹 브라우저에 입력
 		out.println("<h1>" +todayStr +"년 올해 한국 나이로"+ result +"살이고</h1>");
-		out.println(ddi+"띠 입니다.");		
+		out.println("<h1>"+ddi+"띠 입니다.<h1>");		
 }
 catch(Exception e){
 	out.println("예외발생: 매개변수 year가 null입니다.");
