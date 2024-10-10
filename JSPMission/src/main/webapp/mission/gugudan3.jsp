@@ -15,7 +15,15 @@
 	if(sval != null) {
         try {
             val = Integer.parseInt(sval);
+            
+            // 입력된 값이 2보다 작으면 2로, 9보다 크면 9로 설정
+            if (val < 2) {
+                val = 2;
+            } else if (val > 9) {
+                val = 9;
+            }
         } catch (NumberFormatException e) {
+        	
             out.print("잘못된 숫자 입력입니다.<br/>");
         }
     }
