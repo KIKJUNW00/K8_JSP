@@ -27,14 +27,15 @@
 		<th>원본파일명</th><th>저장된 파일명</th><th>작성일</th>
 	</tr>
 	
-	<c:forEach var="file" items="${fileLists}" varStatus="status">
+	<c:set var="fileLists" value="<%=fileLists %>"></c:set>
+	<c:forEach var="file" items="${fileLists}">
 		<tr>
-			<td>${status.idx+1}</td>
-			<td>${file.title}</td>
-			<td>${file.Cate}</td>
-			<td>${file.Ofile}</td>
-			<td>${file.Sfile}</td>
-			<td>${file.Postdate}</td>
+			<td>${file.getIdx()}</td>
+			<td>${file.getTitle()}</td>
+			<td>${file.getCate()}</td>
+			<td>${file.getOfile()}</td>
+			<td>${file.getSfile()}</td>
+			<td>${file.getPostdate()}</td>
 			<td>
 				<c:url var="downloadUrl" value="Download.jsp">
 					<c:param name="oName" value="${file.ofile}" />
